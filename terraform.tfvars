@@ -10,7 +10,7 @@ stgs = {
 
   stg1 = {
 
-    name                     = "storagedev"
+    name                     = "storagedevinder"
     location                 = "centralindia"
     resource_group_name      = "dev_rg"
     account_tier             = "Standard"
