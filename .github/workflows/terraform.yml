@@ -19,6 +19,7 @@ on:
           - destroy
 
 permissions:
+  id-token: write
   contents: read
   pull-requests: write
 
@@ -36,6 +37,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: '{"clientId":"${{ secrets.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{ secrets.ARM_SUBSCRIPTION_ID }}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
