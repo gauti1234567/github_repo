@@ -1,7 +1,7 @@
 rgs = {
 
   rg1 = {
-    name     = "dev_rg"
+    name     = "dev_13"
     location = "centralindia"
   }
 }
@@ -12,7 +12,7 @@ stgs = {
 
     name                     = "storagedevinder"
     location                 = "centralindia"
-    resource_group_name      = "dev_rg"
+    resource_group_name      = "dev_13"
     account_tier             = "Standard"
     account_replication_type = "LRS"
 
